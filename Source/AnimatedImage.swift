@@ -144,6 +144,10 @@ open class AnimatedImageView: UIView, Nuke.Target {
             layer?.add(animation, forKey: "imageTransition")
         }
     }
+    
+    deinit {
+        prepareForReuse()
+    }
 }
 
 public extension Nuke.Cache {
